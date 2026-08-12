@@ -1,0 +1,44 @@
+DATOS DE EJEMPLO — Unidad 3
+Se utilizan en el Tema 3 y se reutilizan en el Tema 10
+Curso: GitHub Copilot para Desarrollo y Aseguramiento de la Calidad
+CEC-EPN — Unidad de Capacitación y Certificación
+
+QUÉ CONTIENE ESTA CARPETA
+-------------------------
+Tres archivos CSV con el registro de trámites de atención de tres días
+distintos. Son datos ficticios: no corresponden a ninguna persona real.
+
+  tramites_2026-08-03.csv
+  tramites_2026-08-04.csv
+  tramites_2026-08-05.csv
+
+ESTRUCTURA DE LOS ARCHIVOS
+--------------------------
+Todos tienen la misma cabecera y las mismas tres columnas:
+
+  cedula    Texto. Debe tener exactamente 10 dígitos numéricos.
+  fecha     Texto en formato dd/mm/aaaa. Debe ser una fecha que exista.
+  minutos   Número entero. Tiempo de atención del trámite.
+
+ADVERTENCIA IMPORTANTE
+----------------------
+Los archivos contienen deliberadamente algunas filas con datos inválidos:
+cédulas de longitud incorrecta, cédulas con letras, cédulas vacías, fechas
+que no existen y fechas con un formato distinto al indicado.
+
+Esto es intencional. Su script debe DETECTARLAS y DESCARTARLAS, no fallar
+al encontrarlas. Un script que se detiene con un error al procesar estos
+archivos está incompleto.
+
+QUÉ DEBE PRODUCIR SU SCRIPT
+---------------------------
+Un archivo resumen.csv con, al menos:
+
+  - Total de filas válidas procesadas
+  - Total de filas descartadas por datos inválidos
+  - Promedio de minutos de atención de las filas válidas
+
+RECOMENDACIÓN
+-------------
+Use únicamente la librería estándar de Python (módulos csv y pathlib).
+Este ejercicio no requiere instalar ninguna dependencia externa.
