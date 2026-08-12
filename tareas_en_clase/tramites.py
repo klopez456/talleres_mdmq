@@ -11,7 +11,7 @@ def validar_cedula(cedula: str) -> bool:
 # Valida una fecha en formato dd/mm/aaaa que exista realmente.
 # Rechaza 31/02/2026 y los meses fuera del rango 1 a 12.
 def validar_fecha(texto: str) -> bool:
-    if texto is None or len(texto) != 10:
+    if (texto is None) or (len(texto) != 10):
         return False
     try:
         dia, mes, anio = map(int, texto.split('/'))
